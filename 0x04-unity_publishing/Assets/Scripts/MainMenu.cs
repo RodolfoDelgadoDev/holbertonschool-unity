@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
+///<summary> Main menu script to play the game, quit the game and set colorblind mode</summary>
 public class MainMenu : MonoBehaviour
 {
     public Material trapMat;
