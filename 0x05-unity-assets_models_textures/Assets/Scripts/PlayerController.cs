@@ -2,12 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that defines the player controller
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>
+    /// Rigibody of the player
+    /// </summary>
     Rigidbody rb;
+    
+    /// <summary>
+    /// speed of the player
+    /// </summary>
     public float speed;
+    
+    /// <summary>
+    /// jump speed of the player
+    /// </summary>
     public float jumpspeed;
+    
+    /// <summary>
+    /// boolean that checks if the player can jump
+    /// </summary>
     public bool canjump = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,40 +49,40 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        /// Define de movement of the player
         float vHorizontal = Input.GetAxis("Horizontal");
         Vector3 move = new Vector3(0,0,0);
         if (Input.GetAxis("Vertical") > 0)
         {
             move += transform.forward;
-            Debug.Log($"Arriba es {transform.forward}");
-
         }
         if (Input.GetAxis("Vertical") < 0)
         {
             move += -transform.forward;
-            Debug.Log($"Abajo es {-transform.forward}");
-
         }
         if (vHorizontal > 0)
         {
             move += transform.right;
-            Debug.Log($"Derecha es {transform.right}");
         }
         if (vHorizontal < 0)
         {
-            Debug.Log($"Izquierda es {-transform.right}");
-
             move += -transform.right;
         }
+        
+        ///Method that normalize de vector, diagonal velocity is the same as the horizontal and vertical
         move.Normalize();
+
+        ///player normal velocity
         if (canjump == true)
         {
            move *= speed;
         }
+        /// reduced velocity of the player while is in the air
         else
         {
             move *= speed / 4;
         }
+        /// Force of movement
         rb.AddForce(move);
     }
     private void OnTriggerEnter(Collider other)
@@ -71,6 +90,11 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Ground")
         {
             canjump = true;
+        }
+        if (other.tag == "Void")
+        {
+            rb.velocity = new Vector3(0,0,0);
+            transform.position = new Vector3(0, 21, -2);
         }
     }
 }
