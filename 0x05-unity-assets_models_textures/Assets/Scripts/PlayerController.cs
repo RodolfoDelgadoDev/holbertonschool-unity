@@ -22,12 +22,39 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
             canjump = false;
         }
+        Rotation();
+    }
+    void Rotation()
+    {
+        transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
     }
     private void FixedUpdate()
     {
         float vHorizontal = Input.GetAxis("Horizontal");
-        float vVertical = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(vHorizontal, 0, vVertical);
+        Vector3 move = new Vector3(0,0,0);
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            move += transform.forward;
+            Debug.Log($"Arriba es {transform.forward}");
+
+        }
+        if (Input.GetAxis("Vertical") < 0)
+        {
+            move += -transform.forward;
+            Debug.Log($"Abajo es {-transform.forward}");
+
+        }
+        if (vHorizontal > 0)
+        {
+            move += transform.right;
+            Debug.Log($"Derecha es {transform.right}");
+        }
+        if (vHorizontal < 0)
+        {
+            Debug.Log($"Izquierda es {-transform.right}");
+
+            move += -transform.right;
+        }
         move.Normalize();
         if (canjump == true)
         {
