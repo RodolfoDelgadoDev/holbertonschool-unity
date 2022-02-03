@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 444860169}
   - component: {fileID: 444860168}
   - component: {fileID: 444860167}
+  - component: {fileID: 444860171}
   m_Layer: 0
   m_Name: WinFlag
   m_TagString: Untagged
@@ -504,6 +505,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444860171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444860166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af25db15936f644eb05f556fe6bd837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: {fileID: 1786379965}
+  player: {fileID: 3227439077355725399}
 --- !u!1 &497982145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,8 +2434,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.56, y: 0.6392408, z: 0.42}
-  m_Center: {x: 0, y: -0.7203796, z: 0}
+  m_Size: {x: 0.56, y: 1.1103454, z: 0.42}
+  m_Center: {x: 0, y: -0.48482728, z: 0}
 --- !u!114 &3227439077355725407
 MonoBehaviour:
   m_ObjectHideFlags: 0
