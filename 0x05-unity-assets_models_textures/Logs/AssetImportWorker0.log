@@ -330,3 +330,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 521.887694 seconds.
+  path: Assets/Models/Flag.fbx
+  artifactKey: Guid(8a199a13126e6784496f93cb652d94e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Flag.fbx using Guid(8a199a13126e6784496f93cb652d94e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea20427999188af5a4bcc039c55df16') in 0.356589 seconds 
+  Import took 0.362454 seconds .
+
