@@ -9,15 +9,9 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static bool GameIsPause = false;
+    public void Pause()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

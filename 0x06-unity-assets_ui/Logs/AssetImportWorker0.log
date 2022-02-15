@@ -146,3 +146,51 @@ Received Import Request.
 Start importing Assets/Scenes/Options.unity using Guid(ebd922e02cbebd04587791ccfffe5dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d5f1da8e26cc48742b3f2edf9f6ebd') in 0.077127 seconds 
   Import took 0.086175 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 438.498607 seconds.
+  path: Assets/Scenes/Level01.unity
+  artifactKey: Guid(c3a1e74302fbaae47b35eb449115be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level01.unity using Guid(c3a1e74302fbaae47b35eb449115be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4679de133c2fd9eca9af8010dccfa5a6') in 0.010709 seconds 
+  Import took 0.013964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 166.688240 seconds.
+  path: Assets/Prefabs/PauseCanvas.prefab
+  artifactKey: Guid(e605664d7cb23ea448436622a7c3f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PauseCanvas.prefab using Guid(e605664d7cb23ea448436622a7c3f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be69981748fc06a004d75bfdb1153ecb') in 0.088813 seconds 
+  Import took 0.092549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.945796 seconds.
+  path: Assets/Scenes/Level01.unity
+  artifactKey: Guid(c3a1e74302fbaae47b35eb449115be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level01.unity using Guid(c3a1e74302fbaae47b35eb449115be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a041841c4050539a5e0ad33f330f1a') in 0.008074 seconds 
+  Import took 0.012888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.616604 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(ba14962dc5c26874590ee66559bea388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(ba14962dc5c26874590ee66559bea388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f55a7f495bdada7d17cb48e90325a5a3') in 0.010599 seconds 
+  Import took 0.013492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.331350 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(ba14962dc5c26874590ee66559bea388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(ba14962dc5c26874590ee66559bea388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efa2021d162b3d9a453ecd82e696903') in 0.005882 seconds 
+  Import took 0.010660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 266.562689 seconds.
+  path: Assets/Prefabs/PauseCanvas.prefab
+  artifactKey: Guid(e605664d7cb23ea448436622a7c3f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PauseCanvas.prefab using Guid(e605664d7cb23ea448436622a7c3f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed46a7fbf7d0cde40a3a461e9d29c671') in 0.008956 seconds 
+  Import took 0.013203 seconds .
+
