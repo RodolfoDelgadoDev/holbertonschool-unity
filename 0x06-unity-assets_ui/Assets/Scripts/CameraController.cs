@@ -44,6 +44,10 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private float currentY = 0.0f;
 
+    public bool isInverted = false;
+    private int invert;
+
+
 
     private float sensivityX = 4.0f;
     private float sensivityY = 1.0f;
@@ -52,19 +56,33 @@ public class CameraController : MonoBehaviour
     {
         camTransform = transform;
         cam = Camera.main;
+        invert = 1;
+        Debug.Log(invert);
     }
 
     private void Update()
     {
+        if (!isInverted)
+        {
+            invert = -1;
+        }
+        else
+        {
+            invert = 1;
+        }
         currentX += Input.GetAxis("Mouse X");
-        currentY += Input.GetAxis("Mouse Y");
+        currentY += Input.GetAxis("Mouse Y") * invert;
 
         /// Clamp the angle ofthe camera
-        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN,  Y_ANGLE_MAX);
 
     }
     private void LateUpdate()
     {
+        if (isInverted == false)
+        {
+            invert = -1;
+        }
         /// direction of the camera
         Vector3 dir = new Vector3(0, 0, -distance);
 

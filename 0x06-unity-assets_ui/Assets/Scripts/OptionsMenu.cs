@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// OptionsMenu class for the Options scene
@@ -12,6 +13,6 @@ public class OptionsMenu : MonoBehaviour
     public void Back()
     {
         prevScene = PlayerPrefs.GetInt("PrevScene");
-        SceneManager.LoadScene(prevScene);
+        SceneManager.LoadSceneAsync(prevScene);
     }
 }
