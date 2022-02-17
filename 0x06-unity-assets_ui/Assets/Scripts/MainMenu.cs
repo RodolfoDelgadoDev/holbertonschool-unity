@@ -10,6 +10,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private int actualScene;
+
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("Inverted"))
+        {
+            PlayerPrefs.SetInt("Inverted", -1);
+        }
+    }
     public void LevelSelect(int level)
     {
         if (level == 1)

@@ -56,20 +56,12 @@ public class CameraController : MonoBehaviour
     {
         camTransform = transform;
         cam = Camera.main;
-        invert = 1;
-        Debug.Log(invert);
+        invert = PlayerPrefs.GetInt("Inverted");
     }
 
     private void Update()
     {
-        if (!isInverted)
-        {
-            invert = -1;
-        }
-        else
-        {
-            invert = 1;
-        }
+        invert = PlayerPrefs.GetInt("Inverted");
         currentX += Input.GetAxis("Mouse X");
         currentY += Input.GetAxis("Mouse Y") * invert;
 

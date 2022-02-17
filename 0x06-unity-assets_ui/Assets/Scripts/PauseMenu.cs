@@ -61,7 +61,11 @@ public class PauseMenu : MonoBehaviour
     {
         actualScene = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("PrevScene", actualScene);
-        SceneManager.LoadSceneAsync(4);
+        GameIsPause = false;
+        player.GetComponent<PlayerController>().enabled = true;
+        cam.GetComponent<CameraController>().enabled = true;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(4);
 
     }
 }
