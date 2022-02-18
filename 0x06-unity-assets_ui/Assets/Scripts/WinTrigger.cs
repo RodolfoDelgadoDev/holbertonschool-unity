@@ -10,14 +10,13 @@ public class WinTrigger : MonoBehaviour
 {
     public Text countdown;
     public GameObject player;
+    public GameObject winCanvas;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            player.GetComponent<Timer>().enabled = false;
-            countdown.color = Color.green;
-            countdown.fontSize = 60;
+            winCanvas.SetActive(true);
         }
     }
 }

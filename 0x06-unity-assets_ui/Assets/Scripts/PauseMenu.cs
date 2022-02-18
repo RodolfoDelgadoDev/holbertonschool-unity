@@ -34,7 +34,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPause = false;
-        Debug.Log(GameIsPause);
         player.GetComponent<PlayerController>().enabled = true;
         cam.GetComponent<CameraController>().enabled = true;
     }
@@ -43,7 +42,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPause = true;
-        Debug.Log(GameIsPause);
         player.GetComponent<PlayerController>().enabled = false;
         cam.GetComponent<CameraController>().enabled = false;
 
@@ -65,7 +63,7 @@ public class PauseMenu : MonoBehaviour
         player.GetComponent<PlayerController>().enabled = true;
         cam.GetComponent<CameraController>().enabled = true;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
 
     }
 }

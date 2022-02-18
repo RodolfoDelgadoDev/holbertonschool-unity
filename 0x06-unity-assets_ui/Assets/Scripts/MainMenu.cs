@@ -22,15 +22,15 @@ public class MainMenu : MonoBehaviour
     {
         if (level == 1)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
         if (level == 2)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         if (level == 3)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
     public void Options()
