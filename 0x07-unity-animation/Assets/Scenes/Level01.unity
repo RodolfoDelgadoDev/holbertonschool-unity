@@ -791,6 +791,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8956276461189781062, guid: 92449964baee16a4ca62dcef79b2a4bc, type: 3}
+--- !u!1 &388616094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8507075756896641830, guid: dcce6e9858de326438db360198134c28, type: 3}
+  m_PrefabInstance: {fileID: 8507075757948702123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &408325021 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3301854924193648853, guid: 18cdb81f8ebd58a48896ff1430756017, type: 3}
@@ -2795,6 +2800,7 @@ GameObject:
   - component: {fileID: 1487422787}
   - component: {fileID: 1487422786}
   - component: {fileID: 1487422785}
+  - component: {fileID: 1487422789}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -2886,6 +2892,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 12.051, y: 0, z: 0}
+--- !u!114 &1487422789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487422784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0725698e68cda2f42a1d9f5f34526225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194225}
+  player: {fileID: 3227439077355725399}
+  timercan: {fileID: 388616094}
+  cutcam: {fileID: 1487422784}
 --- !u!1 &1503335867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,7 +4355,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3227439077355725399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f4df29389cd1a48b848d2836a314b1, type: 3}
   m_Name: 
@@ -4672,6 +4694,10 @@ PrefabInstance:
     - target: {fileID: 8507075756896641830, guid: dcce6e9858de326438db360198134c28, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507075756896641830, guid: dcce6e9858de326438db360198134c28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8507075756896641850, guid: dcce6e9858de326438db360198134c28, type: 3}
       propertyPath: m_Pivot.x

@@ -76,7 +76,7 @@ public class CameraController : MonoBehaviour
             invert = -1;
         }
         /// direction of the camera
-        Vector3 dir = new Vector3(0, 0, -distance);
+        Vector3 dir = new Vector3(0, 2.5f, -6.25f);
 
         /// rotation of the camera
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
