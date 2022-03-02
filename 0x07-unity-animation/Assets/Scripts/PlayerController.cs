@@ -41,11 +41,6 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
             canjump = false;
         }
-        Rotation();
-    }
-    void Rotation()
-    {
-        transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
     }
     private void FixedUpdate()
     {

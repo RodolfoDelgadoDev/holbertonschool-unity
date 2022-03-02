@@ -12,6 +12,8 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private const float Y_ANGLE_MIN = 0.0f;
 
+
+    public GameObject playerModel;
     /// <summary>
     /// The max angle in Y that the mouse can move
     /// </summary>
@@ -61,14 +63,20 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         invert = PlayerPrefs.GetInt("Inverted");
         currentX += Input.GetAxis("Mouse X");
         currentY += Input.GetAxis("Mouse Y") * invert;
 
         /// Clamp the angle ofthe camera
         currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN,  Y_ANGLE_MAX);
-
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, toRotation, 180f * Time.deltaTime);
+        }
     }
+
     private void LateUpdate()
     {
         if (isInverted == false)
