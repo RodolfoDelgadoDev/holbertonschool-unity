@@ -37,6 +37,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (movementDirection != Vector3.zero)
+        {
+            ani.SetBool("moving", true);
+        }
+        else
+        {
+            ani.SetBool("moving", false);
+        }
         if (canjump == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
