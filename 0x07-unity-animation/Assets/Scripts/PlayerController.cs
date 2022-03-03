@@ -97,10 +97,13 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Ground")
         {
             ani.SetBool("jumping", false);
+            ani.SetBool("falling", false);
             canjump = true;
+
         }
         if (other.tag == "Void")
         {
+            ani.SetBool("falling", true);
             rb.velocity = new Vector3(0, 0, 0);
             transform.position = new Vector3(0, 21, -2);
         }
