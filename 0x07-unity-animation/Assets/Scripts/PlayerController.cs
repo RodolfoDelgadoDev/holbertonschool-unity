@@ -17,27 +17,37 @@ public class PlayerController : MonoBehaviour
     /// speed of the player
     /// </summary>
     public float speed;
-    
+
     /// <summary>
     /// jump speed of the player
     /// </summary>
     public float jumpspeed;
-    
+
     /// <summary>
     /// boolean that checks if the player can jump
     /// </summary>
     public bool canjump = true;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent <Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+    private void FixedUpdate()
+    {
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (canjump == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            ani.SetBool("jumping", true);
+            rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
+            canjump = false;
+        }
         if (movementDirection != Vector3.zero)
         {
             ani.SetBool("moving", true);
@@ -46,17 +56,9 @@ public class PlayerController : MonoBehaviour
         {
             ani.SetBool("moving", false);
         }
-        if (canjump == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
-            canjump = false;
-        }
-    }
-    private void FixedUpdate()
-    {
         /// Define de movement of the player
         float vHorizontal = Input.GetAxis("Horizontal");
-        Vector3 move = new Vector3(0,0,0);
+        Vector3 move = new Vector3(0, 0, 0);
         if (Input.GetAxis("Vertical") > 0)
         {
             move += transform.forward;
@@ -73,14 +75,14 @@ public class PlayerController : MonoBehaviour
         {
             move += -transform.right;
         }
-        
+
         ///Method that normalize de vector, diagonal velocity is the same as the horizontal and vertical
         move.Normalize();
 
         ///player normal velocity
         if (canjump == true)
         {
-           move *= speed;
+            move *= speed;
         }
         /// reduced velocity of the player while is in the air
         else
@@ -94,11 +96,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.tag == "Ground")
         {
+            ani.SetBool("jumping", false);
             canjump = true;
         }
         if (other.tag == "Void")
         {
-            rb.velocity = new Vector3(0,0,0);
+            rb.velocity = new Vector3(0, 0, 0);
             transform.position = new Vector3(0, 21, -2);
         }
     }

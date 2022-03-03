@@ -2556,6 +2556,20 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
   m_PrefabInstance: {fileID: 1967998083}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1368185856
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368185853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1373257286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4132,6 +4146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
       propertyPath: m_Controller
       value: 
@@ -4357,6 +4375,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 419749938874389693, guid: 841251a6fac61d14794b6401cc78f786, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5313022815851940983, guid: 841251a6fac61d14794b6401cc78f786, type: 3}
       propertyPath: m_Enabled
       value: 0
