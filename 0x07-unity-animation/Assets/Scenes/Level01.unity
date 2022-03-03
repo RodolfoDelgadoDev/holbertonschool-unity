@@ -2551,6 +2551,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
   m_PrefabInstance: {fileID: 1967998083}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1368185855 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
+  m_PrefabInstance: {fileID: 1967998083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1373257286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4127,6 +4132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fb8dd4b4b628a5441b1732cafd307266, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2539cbd09296d0343978922cc61e62cb, type: 3}
 --- !u!4 &1968367774 stripped
@@ -4427,6 +4436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f4df29389cd1a48b848d2836a314b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ani: {fileID: 1368185855}
   speed: 12
   jumpspeed: 9
   canjump: 1

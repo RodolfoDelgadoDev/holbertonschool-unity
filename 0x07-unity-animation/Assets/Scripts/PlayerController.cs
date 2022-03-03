@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     /// Rigibody of the player
     /// </summary>
     Rigidbody rb;
-    
+
+    public Animator ani;
     /// <summary>
     /// speed of the player
     /// </summary>
