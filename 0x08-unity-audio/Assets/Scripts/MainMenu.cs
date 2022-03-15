@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 {
     private int actualScene;
     public AudioSource buttonRellover;
+    public AudioSource buttonClick;
 
     private void Start()
     {
@@ -50,6 +51,11 @@ public class MainMenu : MonoBehaviour
     public void HoverSound()
     {
         buttonRellover.PlayOneShot(buttonRellover.clip);
+    }
+
+    public void ClickSound()
+    {
+        buttonClick.PlayOneShot(buttonClick.clip);
     }
     
 }

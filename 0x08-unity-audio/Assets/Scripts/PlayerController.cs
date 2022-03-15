@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (canjump == true && Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Entre");
             ani.SetBool("jumping", true);
             rb.AddForce(Vector3.up * jumpspeed, ForceMode.Impulse);
             canjump = false;
