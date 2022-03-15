@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        
         if (canjump == true && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Entre");
