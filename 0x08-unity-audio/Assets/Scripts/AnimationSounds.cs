@@ -17,6 +17,7 @@ public class AnimationSounds : MonoBehaviour
     private AudioSource audioSource;
     private Transform modelTransform;
     private bool recoverycheck = false;
+    public GameObject landingsoundgameobject;
 
     private int i = 0;
 
@@ -30,11 +31,17 @@ public class AnimationSounds : MonoBehaviour
     {
         AudioClip clip = clips[i];
         audioSource.PlayOneShot(clip);
+
     }
     
     private void Recovery()
     {
         recoverycheck = true;
+    }
+    private void ImpactSound()
+    {
+        AudioSource landingSound = landingsoundgameobject.GetComponent<AudioSource>();
+        landingSound.PlayOneShot(landingSound.clip);
     }
     private void Update()
     {
