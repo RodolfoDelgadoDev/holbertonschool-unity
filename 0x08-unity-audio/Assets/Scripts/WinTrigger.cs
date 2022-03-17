@@ -12,6 +12,7 @@ public class WinTrigger : MonoBehaviour
     public GameObject player;
     public GameObject winCanvas;
     public GameObject GameSoundObject;
+    public GameObject VictorySoundGameObject;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,7 +20,9 @@ public class WinTrigger : MonoBehaviour
         {
             winCanvas.SetActive(true);
             AudioSource GameSound = GameSoundObject.GetComponent<AudioSource>();
+            AudioSource VictorySound = VictorySoundGameObject.GetComponent<AudioSource>();
             GameSound.Stop();
+            VictorySound.PlayOneShot(VictorySound.clip);
         }
     }
 }
