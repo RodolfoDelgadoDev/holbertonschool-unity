@@ -28,17 +28,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public bool canjump = true;
 
+   
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
     private void FixedUpdate()
     {
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
