@@ -11,12 +11,15 @@ public class WinTrigger : MonoBehaviour
     public Text countdown;
     public GameObject player;
     public GameObject winCanvas;
+    public GameObject GameSoundObject;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             winCanvas.SetActive(true);
+            AudioSource GameSound = GameSoundObject.GetComponent<AudioSource>();
+            GameSound.Stop();
         }
     }
 }
