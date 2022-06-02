@@ -11,6 +11,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
     public class PlaneSelection : MonoBehaviour
     {
         private Renderer _renderer;
+        public GameObject Casps;
+        private bool check = true;
 
         // Start is called before the first frame update
         void Start()
@@ -23,21 +25,27 @@ namespace UnityEngine.XR.ARFoundation.Samples
         /// </summary>
         public void OnMouseDown()
         {
-            _renderer.material.color = Color.gray;
-            Renderer[] renderers = FindObjectsOfType<Renderer>();
-            GameObject.Find("AR Session Origin").GetComponent<ARPlaneManager>().enabled = false;
-            foreach (Renderer rd in renderers)
+            if (this.tag == "floor" && check == true)
             {
-                var itsme = rd == _renderer;
-                rd.gameObject.SetActive(itsme);
-                if (itsme)
-                    rd.GetComponent<PlaneSelection>().enabled = false;
+                check = false;
+                _renderer.material.color = Color.gray;
+                Renderer[] renderers = FindObjectsOfType<Renderer>();
+                GameObject.Find("AR Session Origin").GetComponent<ARPlaneManager>().enabled = false;
+                foreach (Renderer rd in renderers)
+                {
+                    var itsme = rd == _renderer;
+                    rd.gameObject.SetActive(itsme);
+                    if (itsme)
+                        rd.GetComponent<PlaneSelection>().enabled = false;
+                }
+                Instantiate(Casps, this.transform, false);
+                //GameObject.Find("AR Session Origin").GetComponent<PlaceOnPlane>().enabled = true;
+                var canvasUI = GameObject.Find("Canvas");
+                canvasUI.transform.Find("Panel").gameObject.SetActive(false);
+                canvasUI.transform.Find("StartButton").gameObject.SetActive(true);
+                this.GetComponent<PlaneSelection>().enabled = false;
+                //this.transform.Find("Targets").gameObject.SetActive(true);
             }
-            GameObject.Find("AR Session Origin").GetComponent<PlaceOnPlane>().enabled = true;
-            var canvasUI = GameObject.Find("Canvas");
-            canvasUI.transform.Find("Panel").gameObject.SetActive(false);
-            canvasUI.transform.Find("StartButton").gameObject.SetActive(true);
-            this.GetComponent<PlaneSelection>().enabled = false;
         }
 
     }
