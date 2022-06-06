@@ -38,7 +38,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     if (itsme)
                         rd.GetComponent<PlaneSelection>().enabled = false;
                 }
-                Instantiate(Casps, this.transform, false);
                 //GameObject.Find("AR Session Origin").GetComponent<PlaceOnPlane>().enabled = true;
                 var canvasUI = GameObject.Find("Canvas");
                 canvasUI.transform.Find("Panel").gameObject.SetActive(false);

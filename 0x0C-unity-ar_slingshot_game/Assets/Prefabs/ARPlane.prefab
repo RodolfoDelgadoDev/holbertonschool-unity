@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1670414130690646219}
   - component: {fileID: 4447906197010560046}
   - component: {fileID: 2367042280754007297}
-  - component: {fileID: 6251227576768275008}
   m_Layer: 0
   m_Name: ARPlane
   m_TagString: floor
@@ -129,16 +128,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6251227576768275008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435237069961349601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ecff612622a2a49b53426925cb98d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Casps: {fileID: 879640391595709279, guid: a9bd3578e8a9cfd4e9837c1ecb691e56, type: 3}
