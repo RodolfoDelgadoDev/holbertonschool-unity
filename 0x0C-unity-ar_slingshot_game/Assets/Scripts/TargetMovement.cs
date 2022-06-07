@@ -50,12 +50,4 @@ public class TargetMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "target")
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
-
 }

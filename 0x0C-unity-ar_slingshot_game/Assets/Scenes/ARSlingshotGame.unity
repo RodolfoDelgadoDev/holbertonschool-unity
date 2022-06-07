@@ -1260,3 +1260,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlacedPrefab: {fileID: 879640391595709279, guid: a9bd3578e8a9cfd4e9837c1ecb691e56, type: 3}
   cam: {fileID: 6284753968705825963}
+  newMaterial: {fileID: 2100000, guid: 940788ee080f5b24bbdd2e88512809e6, type: 2}

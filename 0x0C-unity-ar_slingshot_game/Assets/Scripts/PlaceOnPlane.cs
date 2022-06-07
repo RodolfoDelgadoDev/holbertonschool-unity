@@ -27,16 +27,39 @@ namespace UnityEngine.XR.ARFoundation.Samples
             get { return m_PlacedPrefab; }
             set { m_PlacedPrefab = value; }
         }
+        /// <summary>
+        /// Camera
+        /// </summary>
         public Camera cam;
+
         private ARPlaneManager planeManager;
+
         private bool firstCheck = true;
+
+
         /// <summary>
         /// The object instantiated as a result of a successful raycast intersection with a plane.
         /// </summary>
         public GameObject spawnedObject0 { get; private set; }
+
+        /// <summary>
+        /// The object instantiated as a result of a successful raycast intersection with a plane.
+        /// </summary>
         public GameObject spawnedObject1 { get; private set; }
+
+        /// <summary>
+        /// The object instantiated as a result of a successful raycast intersection with a plane.
+        /// </summary>
         public GameObject spawnedObject2 { get; private set; }
+
+        /// <summary>
+        /// The object instantiated as a result of a successful raycast intersection with a plane.
+        /// </summary>
         public GameObject spawnedObject3 { get; private set; }
+
+        /// <summary>
+        /// The object instantiated as a result of a successful raycast intersection with a plane.
+        /// </summary>
         public GameObject spawnedObject4 { get; private set; }
 
 
@@ -73,8 +96,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 {
                     if (hitInfo.collider.tag == "floor" && firstCheck)
                     {
-                        Color transparent = new Color(0f, 0f, 0f, 0f);
-                        hitInfo.collider.gameObject.GetComponent<Renderer>().material.color = transparent;
+                        hitInfo.collider.gameObject.GetComponent<Renderer>().material.color = Color.clear;
 
                         firstCheck = false;
                     }
@@ -84,14 +106,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 if (spawnedObject0 == null)
                 {
                     spawnedObject0 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(0f,0.1f,0f), hitInfo.collider.gameObject.transform.rotation);
-                    spawnedObject1 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(-0.5f, 0.1f, 0f), hitInfo.collider.gameObject.transform.rotation);
-                    spawnedObject2 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(0f, 0.1f, -0.5f), hitInfo.collider.gameObject.transform.rotation);
+                    spawnedObject1 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(-0.5f, 0.1f, -0.5f), hitInfo.collider.gameObject.transform.rotation);
+                    spawnedObject2 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(0.5f, 0.1f, -0.5f), hitInfo.collider.gameObject.transform.rotation);
                     spawnedObject3 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(0.5f, 0.1f, 0f), hitInfo.collider.gameObject.transform.rotation);
-                    spawnedObject4 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(0f, 0.1f, 0.5f), hitInfo.collider.gameObject.transform.rotation);
+                    spawnedObject4 = Instantiate(m_PlacedPrefab, hitInfo.collider.gameObject.transform.position + new Vector3(-0.5f, 0.1f, 0.5f), hitInfo.collider.gameObject.transform.rotation);
 
                     foreach (var plane in planeManager.trackables)
                     {
-                        if (plane.gameObject.GetComponent<Renderer>().material.color != new Color(0f, 0f, 0f, 0f))
+                        if (plane.gameObject.GetComponent<Renderer>().material.color != Color.clear)
                         plane.gameObject.SetActive(false);
                     }
                     
