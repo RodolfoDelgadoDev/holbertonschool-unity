@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// CanvasManager class that defines the logic of the UI of the game
@@ -17,23 +18,46 @@ public class CanvasManager : MonoBehaviour
     /// </summary>
     public AudioClip[] audioClips;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /// <summary>
+    /// Sphere GameObject
+    /// </summary>
+    public GameObject ammo;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>
+    /// Array of gameobjects that gets the ingame panels
+    /// </summary>
+    public GameObject[] inGamePanels;
 
+    public GameObject startButton;
     /// <summary>
     /// OnStartButton event that executes the game
     /// </summary>
     public void OnStartButton()
     {
         audiosource.Play();
+        ammo.SetActive(true);
+        inGamePanels[0].SetActive(true);
+        inGamePanels[1].SetActive(true);
+        startButton.SetActive(false);
+        
     }
+
+    /// <summary>
+    /// OnRestart event that restarts the entire scene
+    /// </summary>
+    public void OnRestart()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    /// <summary>
+    /// OnExit event close the program
+    /// </summary>
+    public void OnExit()
+    {
+        Application.Quit();
+    }
+
+
+
 }

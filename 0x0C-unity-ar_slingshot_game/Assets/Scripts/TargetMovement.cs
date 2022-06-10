@@ -17,7 +17,7 @@ public class TargetMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        vel = 3;
+        vel = 8;
         numb = Random.Range(0,4);
     }
 

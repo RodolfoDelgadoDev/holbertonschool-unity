@@ -119,7 +119,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     
                     planeManager.enabled = false;
                     var canvasUI = GameObject.Find("Canvas");
-                    canvasUI.transform.Find("Panel").gameObject.SetActive(false);
+                    canvasUI.transform.Find("PanelSearching").gameObject.SetActive(false);
                     canvasUI.transform.Find("StartButton").gameObject.SetActive(true);
                 }
                 //else
