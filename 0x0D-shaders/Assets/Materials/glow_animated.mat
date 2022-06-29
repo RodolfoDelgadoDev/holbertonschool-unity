@@ -106,9 +106,12 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Glow_strength: 1
+    - _Maximum_glow_strength: 2
     - _Metallic: 0
+    - _Minimum_glow_strength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Pulse_frequency: 3
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -121,9 +124,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_Color: {r: 0.49667385, g: 0.6431373, b: 0, a: 0}
+    - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Glow_Color: {r: 1.2705883, g: 1.4980392, b: 0, a: 0}
+    - _Glow_Color: {r: 1.6963351, g: 2, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
