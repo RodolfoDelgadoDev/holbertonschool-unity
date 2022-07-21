@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8606933305193531211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: WebGL Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -3369220205959311879}
+  m_InitManagerOnStart: 1
+--- !u!114 &-7616741031748640535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Android Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -5590954151346247720}
+  m_InitManagerOnStart: 1
+--- !u!114 &-7550634116718121329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: iPhone Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders: []
+--- !u!114 &-5639832477298650543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Standalone Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: 724d6c8a5bf59414db4a79b273247b34, type: 2}
+--- !u!114 &-5590954151346247720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Android Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders: []
+--- !u!114 &-5205965819569947689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: iPhone Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -7550634116718121329}
+  m_InitManagerOnStart: 1
+--- !u!114 &-4302356702697588860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Standalone Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -5639832477298650543}
+  m_InitManagerOnStart: 1
+--- !u!114 &-3369220205959311879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: WebGL Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: 0afde296c5b777441bb676fa9e5f6f52, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
+  m_Name: XRGeneralSettings
+  m_EditorClassIdentifier: 
+  Keys: 0100000007000000040000000d000000
+  Values:
+  - {fileID: -4302356702697588860}
+  - {fileID: -7616741031748640535}
+  - {fileID: -5205965819569947689}
+  - {fileID: -8606933305193531211}
