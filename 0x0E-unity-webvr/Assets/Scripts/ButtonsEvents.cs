@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class ButtonsEvents : MonoBehaviour
 {
     public AudioSource Bgmusic;
+    public GameObject togglegameobject;
 
     private Toggle toggle;
 
@@ -16,6 +17,7 @@ public class ButtonsEvents : MonoBehaviour
     {
         toggle = GetComponent<Toggle>();
     }
+
     /// <summary>
     /// OnPressReset Event
     /// </summary>
@@ -25,5 +27,22 @@ public class ButtonsEvents : MonoBehaviour
             Bgmusic.Play();
         else
             Bgmusic.Pause();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "GameController")
+        {
+            if (togglegameobject.GetComponent<Toggle>().isOn)
+            {
+                Bgmusic.Play();
+                togglegameobject.GetComponent<Toggle>().isOn = false;
+            }
+            else
+            {
+                Bgmusic.Pause();
+                togglegameobject.GetComponent<Toggle>().isOn = true;
+            }
+        }
     }
 }
